@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <% if(message.length>0){%>
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong><%=message%> </strong>
+      </div>
+      <%}%>
+      <!-- <% if(message.length>0){%>
+      <h3 class="alert alert-danger" role="alert"><%=message%></h3>
+      <%}%> -->
+      <h2 class="display4 text-center">Register 😍😍</h2>
+      <form action="/register" method="post">
+        <label for="email">Name</label>
+        <input type="text" class="form-control" name="name" />
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" />
+        <label for="pwd">Password</label>
+
+        <!-- 
+          Error Section 
+          
+          <input type="password" class="form-control" name="Password" />
+         -->
+
+        <input type="password" class="form-control" name="password" />
+        <div class="form-group text-center">
+          <input type="submit" value="Register" class="mt-4 btn btn-primary" />
+        </div>
+      </form>
+      <a href="/login" class="btn btn-primary">Login</a>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
